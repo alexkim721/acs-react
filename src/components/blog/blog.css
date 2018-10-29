@@ -1,0 +1,98 @@
+#bloghero {
+  height: 200px;
+  margin-top: 80px;
+}
+
+#bloghero .background {
+  background-image: url(../../images/darknocloud-01.png);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#bloghero .background .header {
+  width: 100%;
+  text-align: center;
+}
+#bloghero .background .header p {
+  font-size: 40px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 10px;
+}
+#articlebloghero {
+  margin: 150px auto 0;
+}
+#articlebloghero .articletitle {
+  margin-top: 30px;
+}
+#articlebloghero h1 {
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+#articlebloghero p {
+  font-weight: 700;
+  margin-top: 10px;
+  letter-spacing: 0.3px;
+  opacity: 0.8;
+  font-size: 14px;
+}
+#articlebloghero p span {
+  color: #ff6249;
+}
+
+#blogs .container {
+  width: 95%;
+  max-width: 1040px;
+  margin: 50px auto 100px;
+}
+#blogs .container #renderedblogs {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#blogs .container #renderedblogs .blogitem {
+  width: 48%;
+  min-width: 300px;
+  margin-bottom: 50px;
+}
+#blogs .container #renderedblogs .blogitem a {
+  transition: 0.2s;
+}
+#blogs .container #renderedblogs .blogitem a:hover {
+  opacity: 0.7;
+}
+#blogs .container #renderedblogs .blogitem .image {
+  background-color: bisque;
+  height: 350px;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+#blogs .container #renderedblogs .blogitem .title {
+  font-size: 25px;
+  font-weight: 600;
+  color: #ff6249;
+}
+#blogs .container #renderedblogs .blogitem .desc {
+  display: none;
+}
+#blogs .container #renderedblogs .blogitem .foot {
+  margin-top: 10px;
+  font-size: 13px;
+  display: flex;
+  font-weight: 600;
+}
+#blogs .container #renderedblogs .blogitem .foot .who {
+  display: flex;
+}
+
+#blogs .content {
+  margin-top: 20px;
+  margin-bottom: 100px;
+}

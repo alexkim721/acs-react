@@ -1,0 +1,113 @@
+#contacthero {
+  height: 200px;
+  margin-top: 80px;
+}
+
+#contacthero .background {
+  background-image: url(../../images/darknocloud-01.png);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#contacthero .background .header {
+  width: 100%;
+  text-align: center;
+}
+#contacthero .background .header p {
+  font-size: 40px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 10px;
+}
+
+#contact .container {
+  height: 500px;
+  display: flex;
+  width: 1040px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+#contact .container #left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#contact .container #left .title {
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+#contact .container #left .desc {
+  font-size: 18px;
+  line-height: 35px;
+}
+
+#meetTeam {
+  background-color: #7ed0de;
+  padding-top: 50px;
+  margin-top: 80px;
+  padding-bottom: 50px;
+}
+#meetTeam .container {
+  width: 1040px;
+  margin: 0 auto;
+}
+#meetTeam .container .title {
+  font-size: 100px;
+  font-weight: 600;
+  color: #7ed0de;
+  letter-spacing: 1px;
+  margin-top: -150px;
+  right: 0;
+}
+#meetTeam .container ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+#meetTeam .container ul li {
+  width: 30%;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: 4px 4px 20px -6px rgba(66, 66, 66, 0.75);
+  -moz-box-shadow: 4px 4px 20px -6px rgba(66, 66, 66, 0.75);
+  box-shadow: 4px 4px 20px -6px rgba(66, 66, 66, 0.75);
+}
+
+#meetTeam .container ul li .image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#meetTeam .container ul li .image img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+}
+#meetTeam .container ul li .info {
+  padding: 20px;
+  background-color: white;
+}
+#meetTeam .container ul li .info .position {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: -2px;
+}
+#meetTeam .container ul li .info .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+#meetTeam .container ul li .info .email {
+  margin-top: 10px;
+}

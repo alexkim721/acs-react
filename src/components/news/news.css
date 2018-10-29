@@ -1,0 +1,107 @@
+#newshero {
+  height: 200px;
+  margin-top: 80px;
+}
+
+#newshero .background {
+  background-image: url(../../images/darknocloud-01.png);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#newshero .background .header {
+  width: 100%;
+  text-align: center;
+}
+#newshero .background .header p {
+  font-size: 40px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 10px;
+}
+
+#articlehero {
+  margin: 150px auto 0;
+}
+#articlehero .articletitle {
+  margin-top: 30px;
+}
+#articlehero h1 {
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+#articlehero p {
+  font-weight: 700;
+  margin-top: 10px;
+  letter-spacing: 0.3px;
+  opacity: 0.8;
+  font-size: 14px;
+}
+#articlehero p span {
+  color: #ff6249;
+}
+
+#news .container {
+  width: 95%;
+  max-width: 1040px;
+  margin: 50px auto 100px;
+  position: relative;
+}
+#news .container #renderednews {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+#news .container #renderednews .newsitem {
+  width: 30%;
+  min-width: 300px;
+  margin: 0 15px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+#news .container #renderednews .newsitem a {
+  transition: 0.2s;
+}
+#news .container #renderednews .newsitem a:hover {
+  opacity: 0.7;
+}
+#news .container #renderednews .newsitem .image {
+  background-color: bisque;
+  height: 220px;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+}
+#news .container #renderednews .newsitem .cont {
+  width: 100%;
+}
+#news .container #renderednews .newsitem .title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ff6249;
+}
+#news .container #renderednews .newsitem .desc p {
+  margin-top: 10px;
+  font-size: 15px;
+  text-align: left;
+  width: 100%;
+}
+#news .container #renderednews .newsitem .foot {
+  margin-top: 10px;
+  font-size: 13px;
+  display: flex;
+  font-weight: 600;
+  justify-content: space-between;
+}
+#news .content {
+  margin-top: 20px;
+  margin-bottom: 100px;
+}

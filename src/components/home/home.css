@@ -1,0 +1,199 @@
+ul {
+  list-style: none;
+}
+#main {
+  margin-top: 80px;
+}
+#main .pagewidth {
+  display: flex;
+  justify-content: space-between;
+}
+#hero {
+  height: 250px;
+  width: 100%;
+  background-image: url(../../images/1080-01.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-top: 80px;
+  opacity: 0.8;
+}
+#main a {
+  transition: 0.2s;
+  color: #ff6249;
+}
+#main a:hover {
+  opacity: 0.7;
+}
+#main #news {
+  width: 60%;
+}
+#main #news .header {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+#main #news ul li {
+  margin-bottom: 50px;
+}
+#main #news ul li .newsImage {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 15px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+#main #news ul li .title {
+  font-size: 30px;
+  font-weight: bolder;
+}
+#main #news ul li p {
+  margin-top: 10px;
+  line-height: 25px;
+}
+#main #news ul li .foot {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  font-size: 12px;
+}
+#main #news ul li .foot {
+  display: flex;
+  font-weight: 600;
+}
+#main #news ul li .foot .author {
+  margin-right: 20px;
+}
+#main #news ul li .foot .readmore {
+  color: black;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  display: none;
+}
+
+#main #events {
+  width: 30%;
+}
+#main #events .header {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+#main #events ul li {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+#main #events ul li .title {
+  font-size: 20px;
+  font-weight: 600;
+}
+#main #events ul li .desc {
+  font-size: 15px;
+  margin-top: 10px;
+}
+#main #events ul li .when {
+  display: flex;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 5px;
+}
+#main #events ul li .start {
+  font-size: 15px;
+  margin-top: 15px;
+  display: flex;
+  font-weight: 600;
+}
+#main #events ul li .end {
+  font-size: 15px;
+  margin-top: 5px;
+  display: flex;
+  font-weight: 600;
+}
+#main #events ul li .when .date {
+  margin-right: 20px;
+}
+#main #events ul li .location {
+  font-size: 15px;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+#about {
+  margin-top: 100px;
+  width: 960px;
+  margin: 0 auto;
+}
+#about #general {
+  display: flex;
+  padding-top: 100px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+#about #general .image {
+  background-image: url(../../images/test2.jpg);
+  height: 500px;
+  width: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#about #general .info {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#about #general .info .header {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+#about #general .info .desc {
+  font-size: 18px;
+  line-height: 35px;
+}
+#about #goals {
+  width: 100%;
+  margin: 80px auto 0;
+  padding-bottom: 80px;
+}
+#about #goals .header {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-align: center;
+}
+#about #goals ul {
+  display: flex;
+  justify-content: space-between;
+}
+#about #goals ul li .img {
+  height: 60px;
+  width: 60px;
+  margin: auto;
+  border-radius: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 110%;
+}
+#about #goals ul li .img#one {
+  background-image: url(../../images/icons-globe.png);
+}
+#about #goals ul li .img#two {
+  background-image: url(../../images/icons-sushi.png);
+}
+#about #goals ul li .img#three {
+  background-image: url(../../images/icons-party.png);
+}
+#about #goals ul li .content-title {
+  margin-top: 20px;
+  font-weight: 600;
+}

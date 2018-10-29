@@ -1,0 +1,11 @@
+#hero {
+  height: 250px;
+  width: 100%;
+  background-image: url(../../images/1080-01.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-top: 80px;
+  opacity: 0.8;
+}
