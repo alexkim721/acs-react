@@ -10,7 +10,11 @@ class RenderNews extends Component {
     pageCount: 0
   };
   componentDidMount() {
-    window.scrollTop = 0;
+    console.log(this.props.data.length);
+    let pages = this.props.data.length;
+    this.setState({ pageCount: Math.ceil(pages / this.state.pageLimit) });
+  }
+  updatePage() {
     let pages = this.props.data.length;
     this.setState({ pageCount: Math.ceil(pages / this.state.pageLimit) });
   }
