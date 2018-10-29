@@ -173,16 +173,7 @@ nav a:hover {
   font-size: 20px;
   font-weight: 700;
 }
-#subscribe .subscribechimp {
-  margin-top: 30px;
-}
-#subscribe .subscribechimp input {
-  width: 30%;
-  min-width: 300px;
-  height: 40px;
-  padding: 0 10px;
-}
-#subscribe .subscribechimp button {
+#subscribe .subscribe {
   border: 2px solid #ff6249;
   padding: 15px 10px;
   width: 150px;
@@ -197,7 +188,7 @@ nav a:hover {
   background-color: #ff6249;
   cursor: pointer;
 }
-#subscribe .subscribechimp button:hover {
+#subscribe .subscribe:hover {
   opacity: 0.7;
 }
 
