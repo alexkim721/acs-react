@@ -22,7 +22,6 @@ class RenderNews extends Component {
   handlePageClick = data => {
     const selected = data.selected
     const offset = Math.ceil(selected * this.state.pageLimit)
-    console.log('clicked')
     this.setState({ offset })
   }
   checkAuthor = id => {

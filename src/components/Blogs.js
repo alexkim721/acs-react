@@ -1,18 +1,18 @@
-import React from "react";
-import { withRouter } from "react-router-dom";
-import BlogHero from "./blog/BlogHero";
-import axios from "axios";
-import "./main.css";
-import "./blog/blog.css";
-import RenderBlogs from "./blog/RenderBlogs";
+import React from 'react'
+import { withRouter } from 'react-router-dom'
+import BlogHero from './blog/BlogHero'
+import axios from 'axios'
+import './main.css'
+import './blog/blog.css'
+import RenderBlogs from './blog/RenderBlogs'
 
 //import RenderedBlogs from "./data/RenderedBlogs";
-import Blog from "./blog/Blog";
+import Blog from './blog/Blog'
 
-const apibase = "http://clients.alexander-kim.com/acs/wp-json/wp/v2";
+const apibase = 'http://clients.alexander-kim.com/acs/wp-json/wp/v2'
 class Blogs extends React.Component {
   componentDidMount() {
-    window.scrollTop = 0;
+    window.scrollTop = 0
   }
 
   state = {
@@ -24,7 +24,7 @@ class Blogs extends React.Component {
       data: [],
       loading: true
     }
-  };
+  }
   //this component makes it so that it activates when the component first mounts
   componentWillMount() {
     //string literal => having a variable with a part of a string
@@ -34,26 +34,27 @@ class Blogs extends React.Component {
           data: data.data,
           loading: false
         }
-      });
-    });
+      })
+    })
 
     axios.get(`${apibase}/users`).then(data => {
       this.setState({
         authors: { data: data.data, loading: false }
-      });
-    });
+      })
+    })
   }
   handlePathChange = path => {
-    const slugs = [];
-    this.state.posts.data.map(item => slugs.push(item.slug));
-    const firstPart = path.split("/")[2];
+    const slugs = []
+    console.log(this.state)
+    this.state.posts.data.map(item => slugs.push(item.slug))
+    const firstPart = path.split('/')[2]
     if (slugs.includes(firstPart)) {
-      return <Blog data={this.state.posts.data[slugs.indexOf(firstPart)]} />;
+      return <Blog data={this.state.posts.data[slugs.indexOf(firstPart)]} />
     } else {
       return (
         <div>
           <BlogHero />
-          {this.state.posts.loading && this.state.authors.loading ? (
+          {this.state.posts.loading || this.state.authors.loading ? (
             <div className="preloader" />
           ) : (
             <RenderBlogs
@@ -62,7 +63,7 @@ class Blogs extends React.Component {
             />
           )}
         </div>
-      );
+      )
     }
     // switch (firstPart) {
     //   case slugs:
@@ -74,14 +75,14 @@ class Blogs extends React.Component {
     //       </div>
     //     );
     // }
-  };
+  }
   render() {
     return (
       <div id="blogs">
         {this.handlePathChange(this.props.history.location.pathname)}
       </div>
-    );
+    )
   }
 }
 
-export default withRouter(Blogs);
+export default withRouter(Blogs)
