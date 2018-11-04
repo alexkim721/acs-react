@@ -75,6 +75,14 @@ nav a:hover {
   opacity: 0.15;
 }
 
+.preloader {
+  background-image: url("../images/Preloader1.gif");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50vh;
+}
+
 .pagewidth {
   width: 960px;
   margin: 0 auto;

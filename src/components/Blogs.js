@@ -54,7 +54,7 @@ class Blogs extends React.Component {
         <div>
           <BlogHero />
           {this.state.posts.loading && this.state.authors.loading ? (
-            <div>loading...</div>
+            <div className="preloader" />
           ) : (
             <RenderBlogs
               data={this.state.posts.data}

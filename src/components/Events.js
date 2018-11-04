@@ -31,7 +31,11 @@ class Events extends Component {
     return (
       <div id="events">
         <EventHero />
-        <RenderEvents data={this.state.events.data} />
+        {this.state.events.loading ? (
+          <div className="preloader" />
+        ) : (
+          <RenderEvents data={this.state.events.data} />
+        )}
       </div>
     );
   }

@@ -8,11 +8,15 @@ class RenderBlogs extends Component {
     offset: 0,
     pageCount: 0
   };
-  componentDidMount() {
-    window.scrollTop = 0;
+  componentDidUpdate(prevProps) {
+    if (prevProps.data !== this.props.data) {
+      this.updatePage();
+    }
+  }
+  updatePage = () => {
     let pages = this.props.data.length;
     this.setState({ pageCount: Math.ceil(pages / this.state.pageLimit) });
-  }
+  };
   handlePageClick = data => {
     const selected = data.selected;
     const offset = Math.ceil(selected * this.state.pageLimit);

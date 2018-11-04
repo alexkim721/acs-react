@@ -53,17 +53,17 @@ class NewsEvents extends Component {
     return (
       <section id="main">
         <div className="pagewidth">
-          {!events.loading &&
-            !posts.loading &&
-            !authors.loading && (
-              <React.Fragment>
-                <NewsSub
-                  data={this.state.posts.data}
-                  authors={this.state.authors.data}
-                />
-                <EventsSub data={this.state.events.data} />
-              </React.Fragment>
-            )}
+          {!events.loading && !posts.loading && !authors.loading ? (
+            <React.Fragment>
+              <NewsSub
+                data={this.state.posts.data}
+                authors={this.state.authors.data}
+              />
+              <EventsSub data={this.state.events.data} />
+            </React.Fragment>
+          ) : (
+            <div className="preloader" />
+          )}
         </div>
       </section>
     );

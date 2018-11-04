@@ -26,18 +26,32 @@ class About extends Component {
                 <div className="content">
                   <div className="img" id="one" />
                   <div className="content-title">Promote Awareness</div>
+                  <div className="desc">
+                    Promote and provide an understanding of the Asian culture
+                    and heritage to the students of RIT and the greater
+                    Rochester community.{" "}
+                  </div>
                 </div>
               </li>
               <li>
                 <div className="content">
                   <div className="img" id="two" />
                   <div className="content-title">Share Culture</div>
+                  <div className="desc">
+                    Provide a conducive environment for encouraging Asian
+                    students to utilize their history, culture, and art to
+                    foster self-esteem and respect for their heritage.
+                  </div>
                 </div>
               </li>
               <li>
                 <div className="content">
                   <div className="img" id="three" />
                   <div className="content-title">Have fun on the way!</div>
+                  <div className="desc">
+                    Meeting new and interesting people and simply, having some
+                    fun!
+                  </div>
                 </div>
               </li>
             </ul>

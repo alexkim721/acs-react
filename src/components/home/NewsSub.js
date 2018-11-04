@@ -14,7 +14,7 @@ class NewsSub extends Component {
   render() {
     return (
       <div id="news">
-        <div className="header">NEWS</div>
+        <div className="header">RECENT NEWS</div>
         <ul id="renderednews">
           {this.props.data &&
             this.props.data.slice(0, 2).map(news => (

@@ -50,7 +50,7 @@ class News extends Component {
         <div>
           <NewsHero />
           {this.state.posts.loading && this.state.authors.loading ? (
-            <div>loading...</div>
+            <div className="preloader" />
           ) : (
             <RenderNews
               data={this.state.posts.data}
