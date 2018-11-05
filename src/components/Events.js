@@ -7,7 +7,7 @@ import RenderEvents from "./events/RenderEvents";
 // import RenderedEvents from "./data/RenderedEvents";
 
 const apibase =
-  "http://clients.alexander-kim.com/acs/wp-json/tribe/events/v1/events";
+  "https://clients.alexander-kim.com/acs/wp-json/tribe/events/v1/events";
 class Events extends Component {
   state = {
     events: {

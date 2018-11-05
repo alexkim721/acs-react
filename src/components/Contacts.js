@@ -6,7 +6,7 @@ import "./contact/contact.css";
 import RenderContacts from "./contact/RenderContacts";
 // import RenderedContacts from "./data/RenderedContacts";
 
-const apibase = "http://clients.alexander-kim.com/acs/wp-json/wp/v2";
+const apibase = "https://clients.alexander-kim.com/acs/wp-json/wp/v2";
 class Contacts extends Component {
   componentDidMount() {
     window.scrollTop = 0;

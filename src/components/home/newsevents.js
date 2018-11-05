@@ -5,9 +5,9 @@ import "../main.css";
 import NewsSub from "./NewsSub";
 import EventsSub from "./EventsSub";
 
-const newsapibase = "http://clients.alexander-kim.com/acs/wp-json/wp/v2";
+const newsapibase = "https://clients.alexander-kim.com/acs/wp-json/wp/v2";
 const evapibase =
-  "http://clients.alexander-kim.com/acs/wp-json/tribe/events/v1/events";
+  "https://clients.alexander-kim.com/acs/wp-json/tribe/events/v1/events";
 class NewsEvents extends Component {
   state = {
     events: {
