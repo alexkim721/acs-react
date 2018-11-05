@@ -1,36 +1,35 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
-import ReactPaginate from "react-paginate";
+import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
+import ReactPaginate from 'react-paginate'
 
 class RenderBlogs extends Component {
   state = {
     pageLimit: 4,
     offset: 0,
     pageCount: 0
-  };
-  componentDidUpdate(prevProps) {
-    if (prevProps.data !== this.props.data) {
-      this.updatePage();
-    }
   }
-  updatePage = () => {
-    let pages = this.props.data.length;
-    this.setState({ pageCount: Math.ceil(pages / this.state.pageLimit) });
-  };
-  handlePageClick = data => {
-    const selected = data.selected;
-    const offset = Math.ceil(selected * this.state.pageLimit);
+  componentDidMount = () => {
+    this.updatePage()
+  }
 
-    this.setState({ offset });
-  };
+  updatePage = () => {
+    let pages = this.props.data.length
+    this.setState({ pageCount: Math.ceil(pages / this.state.pageLimit) })
+  }
+  handlePageClick = data => {
+    const selected = data.selected
+    const offset = Math.ceil(selected * this.state.pageLimit)
+
+    this.setState({ offset })
+  }
   checkImage = image => {
-    return image ? image : require("../../images/placeholder-grey.png");
-  };
+    return image ? image : require('../../images/placeholder-grey.png')
+  }
   checkAuthor = id => {
     return this.props.authors.find(author => {
-      return author.id === id;
-    }).name;
-  };
+      return author.id === id
+    }).name
+  }
 
   renderData = data => {
     return data
@@ -43,7 +42,7 @@ class RenderBlogs extends Component {
             alt={blogs.title.rendered}
           />
           <div className="cont">
-            <NavLink className="title" to={"blog/" + blogs.slug}>
+            <NavLink className="title" to={'blog/' + blogs.slug}>
               {blogs.title.rendered}
             </NavLink>
             <div className="desc">{blogs.title.rendered}</div>
@@ -51,15 +50,15 @@ class RenderBlogs extends Component {
               <div className="auth">
                 {blogs.acf.author
                   ? blogs.acf.author
-                  : this.checkAuthor(blogs.author)}{" "}
+                  : this.checkAuthor(blogs.author)}{' '}
                 ● {blogs.date}
               </div>
               <div className="date"> </div>
             </div>
           </div>
         </div>
-      ));
-  };
+      ))
+  }
 
   render() {
     return (
@@ -68,24 +67,24 @@ class RenderBlogs extends Component {
           {this.renderData(this.props.data)}
           <ReactPaginate
             previousLabel={
-              <img src={require("../../images/prev.png")} alt="prev" />
+              <img src={require('../../images/prev.png')} alt="prev" />
             }
             nextLabel={
-              <img src={require("../../images/next.png")} alt="next" />
+              <img src={require('../../images/next.png')} alt="next" />
             }
-            breakClassName={"break-me"}
+            breakClassName={'break-me'}
             pageCount={this.state.pageCount}
             marginPagesDisplayed={2}
             pageRangeDisplayed={5}
             onPageChange={this.handlePageClick}
-            containerClassName={"pagination"}
-            subContainerClassName={"pages pagination"}
-            activeClassName={"active"}
+            containerClassName={'pagination'}
+            subContainerClassName={'pages pagination'}
+            activeClassName={'active'}
           />
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default RenderBlogs;
+export default RenderBlogs
