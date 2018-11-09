@@ -1,36 +1,46 @@
-import React, { Component } from 'react'
-import './news.css'
-import ReactPaginate from 'react-paginate'
-import { NavLink } from 'react-router-dom'
+import React, { Component } from "react";
+import "./news.css";
+import ReactPaginate from "react-paginate";
+import { NavLink } from "react-router-dom";
+import renderHTML from "react-render-html";
 
 class RenderNews extends Component {
   state = {
     pageLimit: 6,
     offset: 0,
     pageCount: 0
-  }
+  };
 
   componentDidMount() {
-    this.updatePage()
+    this.updatePage();
   }
   updatePage = () => {
-    console.log(this.props.data)
-    let pages = this.props.data.length
-    this.setState({ pageCount: Math.ceil(pages / this.state.pageLimit) })
-  }
+    let pages = this.props.data.length;
+    this.setState({ pageCount: Math.ceil(pages / this.state.pageLimit) });
+  };
   handlePageClick = data => {
-    const selected = data.selected
-    const offset = Math.ceil(selected * this.state.pageLimit)
-    this.setState({ offset })
-  }
+    const selected = data.selected;
+    const offset = Math.ceil(selected * this.state.pageLimit);
+    this.setState({ offset });
+  };
   checkAuthor = id => {
     return this.props.authors.find(author => {
-      return author.id === id
-    }).name
-  }
+      return author.id === id;
+    }).name;
+  };
   checkImage = image => {
-    return image ? image : require('../../images/placeholder-grey.png')
-  }
+    return image ? image : require("../../images/placeholder-grey.png");
+  };
+  shorten = excerpt => {
+    let splitExcerpt = excerpt.substring(3, excerpt.indexOf("</p>"));
+    const exarr = splitExcerpt.split(" ");
+    if (excerpt.split(" ").length > 14) {
+      return "<p>" + exarr.slice(0, 14).join(" ") + "...</p>";
+    } else {
+      return "<p>" + exarr.slice(0, 14).join(" ") + "</p>";
+    }
+  };
+
   renderData = data => {
     return data
       .slice(this.state.offset, this.state.offset + this.state.pageLimit)
@@ -42,45 +52,46 @@ class RenderNews extends Component {
             alt={news.title.rendered}
           />
           <div className="cont">
-            <NavLink className="title" to={'news/' + news.slug}>
+            <NavLink className="title" to={"news/" + news.slug}>
               {news.title.rendered}
             </NavLink>
-            <div className="desc">{news.title.rendered}</div>
+            <div className="desc">
+              {renderHTML(this.shorten(news.excerpt.rendered))}
+            </div>
             <div className="foot">
               <div className="auth">{this.checkAuthor(news.author)}</div>
               <div className="date">{news.date}</div>
             </div>
           </div>
         </div>
-      ))
-  }
+      ));
+  };
 
   render() {
-    console.log(this.state)
     return (
       <div className="container">
         <div id="renderednews">
           {this.renderData(this.props.data)}
           <ReactPaginate
             previousLabel={
-              <img src={require('../../images/prev.png')} alt="prev" />
+              <img src={require("../../images/prev.png")} alt="prev" />
             }
             nextLabel={
-              <img src={require('../../images/next.png')} alt="next" />
+              <img src={require("../../images/next.png")} alt="next" />
             }
-            breakClassName={'break-me'}
+            breakClassName={"break-me"}
             pageCount={this.state.pageCount}
             marginPagesDisplayed={2}
             pageRangeDisplayed={5}
             onPageChange={this.handlePageClick}
-            containerClassName={'pagination'}
-            subContainerClassName={'pages pagination'}
-            activeClassName={'active'}
+            containerClassName={"pagination"}
+            subContainerClassName={"pages pagination"}
+            activeClassName={"active"}
           />
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default RenderNews
+export default RenderNews;

@@ -26,7 +26,6 @@ class Blog extends Component {
         <section className="content">
           {renderHTML(this.props.data.content.rendered)}
         </section>
-        {console.log(this)}
       </div>
     );
   }

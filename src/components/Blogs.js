@@ -45,7 +45,6 @@ class Blogs extends React.Component {
   }
   handlePathChange = path => {
     const slugs = [];
-    console.log(this.state);
     this.state.posts.data.map(item => slugs.push(item.slug));
     const firstPart = path.split("/")[2];
     if (slugs.includes(firstPart)) {

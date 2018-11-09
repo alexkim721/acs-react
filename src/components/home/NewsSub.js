@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import renderHTML from "react-render-html";
 
 class NewsSub extends Component {
   checkAuthor = id => {
@@ -28,7 +29,9 @@ class NewsSub extends Component {
                   <NavLink className="title" to={"news/" + news.slug}>
                     {news.title.rendered}
                   </NavLink>
-                  <div className="desc">{news.title.rendered}</div>
+                  <div className="desc">
+                    {renderHTML(news.content.rendered)}
+                  </div>
                   <div className="foot">
                     <div className="auth">{this.checkAuthor(news.author)}</div>
                     <div className="date">{news.date}</div>

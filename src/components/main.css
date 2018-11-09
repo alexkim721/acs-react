@@ -134,6 +134,9 @@ nav a:hover {
   object-position: center;
   opacity: 0.7;
 }
+p.link-more {
+  display: none;
+}
 
 #subscribe {
   text-align: center;
