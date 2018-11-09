@@ -12,6 +12,16 @@ class NewsSub extends Component {
   checkImage = image => {
     return image ? image : require("../../images/placeholder-grey.png");
   };
+
+  shorten = excerpt => {
+    let splitExcerpt = excerpt.substring(3, excerpt.indexOf("</p>"));
+    const exarr = splitExcerpt.split(" ");
+    if (excerpt.split(" ").length > 24) {
+      return "<p>" + exarr.slice(0, 24).join(" ") + "...</p>";
+    } else {
+      return "<p>" + exarr.slice(0, 24).join(" ") + "</p>";
+    }
+  };
   render() {
     return (
       <div id="news">
@@ -30,7 +40,7 @@ class NewsSub extends Component {
                     {news.title.rendered}
                   </NavLink>
                   <div className="desc">
-                    {renderHTML(news.content.rendered)}
+                    {renderHTML(this.shorten(news.excerpt.rendered))}
                   </div>
                   <div className="foot">
                     <div className="auth">{this.checkAuthor(news.author)}</div>

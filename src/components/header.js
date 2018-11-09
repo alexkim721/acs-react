@@ -31,7 +31,7 @@ class Header extends Component {
                   news
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink
                   activeClassName="selectedlink"
                   className="navitem"
@@ -39,7 +39,7 @@ class Header extends Component {
                 >
                   gallery
                 </NavLink>
-              </li>
+              </li> */}
               <li>
                 <NavLink
                   activeClassName="selectedlink"

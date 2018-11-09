@@ -24,7 +24,7 @@ class App extends Component {
       case "":
         return <Home />;
       default:
-        return <div />;
+        return <Home />;
     }
   };
   render() {
